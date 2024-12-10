@@ -1,4 +1,4 @@
-## telescope-csearch
+## telescope_csearch
 
 This [Telescope](https://github.com/nvim-telescope/telescope.nvim) plugin uses [codesearch](https://github.com/google/codesearch/tree/master) to search code in your project.
 
