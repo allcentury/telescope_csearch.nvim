@@ -1,6 +1,6 @@
 ## telescope-csearch
 
-This [Telescope])(https://github.com/nvim-telescope/telescope.nvim) plugin uses [codesearch](https://github.com/google/codesearch/tree/master) to search code in your project.
+This [Telescope](https://github.com/nvim-telescope/telescope.nvim) plugin uses [codesearch](https://github.com/google/codesearch/tree/master) to search code in your project.
 
 ### Installation
 
@@ -40,3 +40,7 @@ use {
 ```lua
 vim.kemap.set('n', '<leader>cs', '<cmd>lua require("telescope_csearch").search()<cr>', { desc = 'Search code' })
 ```
+
+## License
+
+MIT
