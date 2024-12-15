@@ -21,7 +21,7 @@ use {
 Using [lazy](https://github.com/folke/lazy.nvim):
 
 ```lua
-use {
+return {
   'allcentury/telescope-csearch',
   requires = { 'nvim-telescope/telescope.nvim' },
   config = function()
@@ -38,7 +38,17 @@ use {
 ## Usage
 
 ```lua
-vim.kemap.set('n', '<leader>cs', '<cmd>lua require("telescope_csearch").search()<cr>', { desc = 'Search code' })
+-- search by pressing <leader>cs
+vim.keymap.set('n', '<leader>cs', function()
+  require('telescope_csearch').csearch()
+end, { desc = 'CSearch grep' })
+
+-- search for word under cursor
+vim.keymap.set('n', '<leader>csw', function()
+  require('telescope_csearch').csearch({
+    default_text = vim.fn.expand('<cword>')
+  })
+end, { desc = 'CSearch word under cursor' })
 ```
 
 ## License
